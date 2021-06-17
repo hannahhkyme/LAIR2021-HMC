@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/particleFilter.csproj": {}
+    "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj": {}
   },
   "projects": {
-    "/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/particleFilter.csproj": {
+    "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/particleFilter.csproj",
+        "projectUniqueName": "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj",
         "projectName": "particleFilter",
-        "projectPath": "/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/particleFilter.csproj",
-        "packagesPath": "/Users/romanherrera/.nuget/packages/",
-        "outputPath": "/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/",
+        "projectPath": "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj",
+        "packagesPath": "/Users/hannahkyme/.nuget/packages/",
+        "outputPath": "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/romanherrera/.config/NuGet/NuGet.Config"
+          "/Users/hannahkyme/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
