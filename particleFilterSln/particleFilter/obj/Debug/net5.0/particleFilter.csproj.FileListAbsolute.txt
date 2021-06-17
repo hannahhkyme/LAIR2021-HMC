@@ -1,0 +1,15 @@
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.csproj.AssemblyReference.cache
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.AssemblyInfoInputs.cache
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.AssemblyInfo.cs
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.csproj.CoreCompileInputs.cache
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/bin/Debug/net5.0/particleFilter.deps.json
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/bin/Debug/net5.0/particleFilter.runtimeconfig.json
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/bin/Debug/net5.0/particleFilter.runtimeconfig.dev.json
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/bin/Debug/net5.0/particleFilter.dll
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/bin/Debug/net5.0/ref/particleFilter.dll
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/bin/Debug/net5.0/particleFilter.pdb
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.dll
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/ref/particleFilter.dll
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.pdb
+/Users/romanherrera/Desktop/Projects/particleFilterSln/particleFilter/obj/Debug/net5.0/particleFilter.genruntimeconfig.cache
