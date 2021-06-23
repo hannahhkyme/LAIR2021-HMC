@@ -34,7 +34,7 @@ namespace particleFilter
             W_P = 0.5 ;
         }
 
-        
+
 
         double angle_wrap(double ang)
         {
@@ -42,16 +42,12 @@ namespace particleFilter
             {
                 return ang;
             }
-            else if (ang > Math.PI) {
-                ang += (-2 * Math.PI);
-                return angle_wrap(ang);
-            }
-            else {
-                ang += (2 * Math.PI);
+            else
+            {
+                ang = ang % Math.PI;
                 return angle_wrap(ang);
             }
         }
-
         double velocity_wrap(double vel)
         {
             if (vel <= 5)
@@ -119,22 +115,21 @@ namespace particleFilter
             // constant = sqrt of 2Pi
             //double constant = 2.506628;
             double constant = 1.2;
-            double dAlpha = Math.Pow(particleAlpha - auv_alpha, 2);
-            double function_alpha = .001 + (1/(SIGMA_ALPHA * constant) * (Math.Pow(E, -angle_wrap(dAlpha))))/DENOMINATOR;
-            Console.WriteLine("weight before in function");
-            Console.WriteLine(this.W_P);
+            double newdAlpha = angle_wrap(particleAlpha - auv_alpha);
+            double dAlpha = Math.Pow(newdAlpha, 2);
+            double function_alpha = .001 + (1 / (SIGMA_ALPHA * constant) * (Math.Pow(E, -dAlpha))) / DENOMINATOR;
             Console.WriteLine("this is dAlpha");
-            Console.WriteLine(dAlpha);
+            Console.WriteLine(newdAlpha);
             this.W_P = function_alpha;
             //range weight
             //print("auv alpha", auv_alpha)
             double SIGMA_RANGE = 100.0;
             // double DENOMINATOR2 = (2 * Math.Pow(SIGMA_RANGE, 2));
             double dRange = Math.Pow(particleRange - auv_range, 2);
-            double function_weight = .001 + (1 / (SIGMA_RANGE * constant) * Math.Pow(-dRange, E))/20000;
+            double function_weight = .001 + (1 / (SIGMA_RANGE * constant) * Math.Pow(E, -dRange)) / 20000;
 
             this.W_P *= function_weight;
-          
+
         }
 
         static void Main(string[] args)
