@@ -5,20 +5,18 @@ namespace particleFilter
     {
         Random random_num = new Random();
         // SETS TYPE OF MEMBER VARIABLE
-        public double X_R;
-        public double Y_R;
-        public double Z_R;
-        public double THETA_R;
-        public double V_R;
-        public double Current_Time;
+        public double X;
+        public double Y;
+        public double Z;
+        public double THETA;
+        public double V;
         public Robot()
         {
-            X_R = 1.0;
-            Y_R = 2.0;
-            Z_R = 3.0;
-            THETA_R = Math.PI;
-            V_R = 3.0;
-            Current_Time = 0.1;
+            X = 1.0;
+            Y = 2.0;
+            Z = 3.0;
+            THETA = Math.PI;
+            V = 3.0;
         }
 
 

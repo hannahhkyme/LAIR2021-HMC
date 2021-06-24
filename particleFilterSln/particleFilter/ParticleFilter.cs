@@ -4,20 +4,12 @@ namespace particleFilter
     public class ParticleFilter
     {
 
-        public double x_shark;
-        public double y_shark;
-        public double z_shark;
-        public double x_auv;
-        public double y_auv;
-        public double z_auv;
+        public int NUMBER_OF_PARTICLES;
+        public double Current_Time;
         public ParticleFilter()
         {
-            x_shark = 1.0;
-            y_shark = 2.0;
-            z_shark = 2.0;
-            x_auv = 2.0;
-            y_auv = 3.0;
-            z_auv = 2.0;
+            Current_Time = 0;
+            NUMBER_OF_PARTICLES = 1000;
         }
         void create()
         {

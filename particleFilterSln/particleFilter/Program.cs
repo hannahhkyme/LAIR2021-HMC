@@ -12,14 +12,14 @@ namespace particleFilter
         public double THETA_P;
         public double V_P;
         public int INITIAL_PARTICLE_RANGE;
-        public int NUMBER_OF_PARTICLES;
+        
+
         public double W_P;
         public Particle()
         {
 
             // Class Members
             INITIAL_PARTICLE_RANGE = 150;
-            NUMBER_OF_PARTICLES = 1000;
             // X_P = random_num.Next(-INITIAL_PARTICLE_RANGE, INITIAL_PARTICLE_RANGE);
             X_P = 2.0;
             //Y_P = random_num.Next(-INITIAL_PARTICLE_RANGE, INITIAL_PARTICLE_RANGE);
@@ -69,7 +69,7 @@ namespace particleFilter
                 input (dt) is the amount of time the particles are "moving" 
                     generally set to .1, but it should be whatever the "time.sleep" is set to in the main loop
             */
-
+            // pull out
             int RANDOM_VELOCITY = 5;
             double RANDOM_THETA = Math.PI / 2;
 
@@ -92,7 +92,7 @@ namespace particleFilter
         {
             // calculates the alpha value of a particle
 
-            double particleAlpha = angle_wrap(Math.Atan2((Y_P + -y_auv), (X_P + -x_auv))) - theta_auv;
+            double particleAlpha = angle_wrap(Math.Atan2((Y_P - y_auv), (X_P  - x_auv))) - theta_auv;
             return particleAlpha;
         }
 
@@ -100,7 +100,7 @@ namespace particleFilter
         double calc_particle_range(double x_auv,double y_auv)
         {
             //calculates the range from the particle to the auv
-            double particleRange = Math.Sqrt(Math.Pow((y_auv + this.Y_P), 2) + Math.Pow((x_auv + this.X_P), 2));
+            double particleRange = Math.Sqrt(Math.Pow((y_auv - this.Y_P), 2) + Math.Pow((x_auv - this.X_P), 2));
             return particleRange;
         }
 
@@ -117,18 +117,16 @@ namespace particleFilter
             double constant = 1.2;
             double newdAlpha = angle_wrap(particleAlpha - auv_alpha);
             double dAlpha = Math.Pow(newdAlpha, 2);
-            double function_alpha = .001 + (1 / (SIGMA_ALPHA * constant) * (Math.Pow(E, -dAlpha))) / DENOMINATOR;
-            Console.WriteLine("this is dAlpha");
-            Console.WriteLine(newdAlpha);
+            double function_alpha = .001 + (Math.Pow(E, -dAlpha)) / DENOMINATOR;
+           
             this.W_P = function_alpha;
-            //range weight
-            //print("auv alpha", auv_alpha)
+  
             double SIGMA_RANGE = 100.0;
-            // double DENOMINATOR2 = (2 * Math.Pow(SIGMA_RANGE, 2));
+            // double DENOMINATOR2 = ( Math.Pow(SIGMA_RANGE, 2));
             double dRange = Math.Pow(particleRange - auv_range, 2);
-            double function_weight = .001 + (1 / (SIGMA_RANGE * constant) * Math.Pow(E, -dRange)) / 20000;
+            double function_range = .001 + (1 / (SIGMA_RANGE * constant) * Math.Pow(E, -dRange)) / 20000;
 
-            this.W_P *= function_weight;
+            this.W_P *= function_range;
 
         }
 
