@@ -19,9 +19,30 @@ namespace particleFilter
             y_auv = 3.0;
             z_auv = 2.0;
         }
-        void create(){
+        void create()
+        {
             // creates a list of 1000 particles
         }
-        void 
+        void update()
+        {
+            // updates particles while simulated
+            // returns new list of updated particles
+        }
+        void update_weights(double new_x_shark, double new_shark_y)
+        {
+            // normalize new weights for each new shark measurement
+        }
+        void correct()
+        {
+            //corrects the particles, adding more copies of particles based on how high the weight is
+        }
+        void calc_range_error()
+        {
+            // calculates the average particles position to the true sharks' position
+        }
+        void calc_alpha_error()
+        {
+            // calculates the average particles position to the true sharks' position
+        }
     }
 }
