@@ -25,8 +25,6 @@ namespace particleFilter
 
         }
 
-
-
         void calc_new_robot_position()
         {
 
