@@ -129,6 +129,19 @@ namespace particleFilter
             this.W *= function_range;
 
         }
+        public Particle DeepCopy()
+        {
+            Particle temp = (Particle)this.MemberwiseClone();
+            temp.X = this.X;
+            temp.Y = this.Y;
+            temp.Z = this.Z;
+            temp.THETA = this.THETA;
+            temp.V = this.V;
+            temp.W = this.W;
+            temp.INITIAL_PARTICLE_RANGE = this.INITIAL_PARTICLE_RANGE;
+            return temp;
+
+        }
 
         static void Main(string[] args)
         {
