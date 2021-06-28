@@ -1,0 +1,10 @@
+C:\Users\11thr\source\repos\ChartTest\ChartTest\bin\Debug\ChartTest.exe.config
+C:\Users\11thr\source\repos\ChartTest\ChartTest\bin\Debug\ChartTest.exe
+C:\Users\11thr\source\repos\ChartTest\ChartTest\bin\Debug\ChartTest.pdb
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.csproj.AssemblyReference.cache
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\TestRealTimeCharts.Form1.resources
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.Properties.Resources.resources
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.csproj.GenerateResource.cache
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.csproj.CoreCompileInputs.cache
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.exe
+C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.pdb
