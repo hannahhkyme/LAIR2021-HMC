@@ -62,7 +62,7 @@ namespace particleFilter
         }
 
         
-        void updateParticles(double dt)
+        public void updateParticles()
         {
             /*updates the particles location with random v and theta
 
@@ -82,13 +82,13 @@ namespace particleFilter
             this.THETA = angle_wrap(this.THETA);
 
             // change x & y coordinates to match
-            this.X += this.V * Math.Cos(this.THETA) * dt;
-            this.Y += this.V * Math.Sin(this.THETA) * dt;
+            this.X += this.V * Math.Cos(this.THETA);
+            this.Y += this.V * Math.Sin(this.THETA);
 
         }
 
 
-        double calc_particle_alpha(double x_auv, double y_auv, double theta_auv)
+        public double calc_particle_alpha(double x_auv, double y_auv, double theta_auv)
         {
             // calculates the alpha value of a particle
 
@@ -97,14 +97,14 @@ namespace particleFilter
         }
 
 
-        double calc_particle_range(double x_auv,double y_auv)
+        public double calc_particle_range(double x_auv,double y_auv)
         {
             //calculates the range from the particle to the auv
             double particleRange = Math.Sqrt(Math.Pow((y_auv - this.Y), 2) + Math.Pow((x_auv - this.X), 2));
             return particleRange;
         }
 
-        void weight(double auv_alpha, double particleAlpha, double auv_range, double particleRange)
+        public void weight(double auv_alpha, double particleAlpha, double auv_range, double particleRange)
         {
             /* calculates the weight according to alpha, then the weight according
              * they are multiplied together to get the final weight */

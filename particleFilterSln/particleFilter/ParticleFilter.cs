@@ -58,7 +58,7 @@ namespace particleFilter
             // updates particles while simulated
             // returns new list of updated particles
 
-            for (int i = 0; i < particleList.Length; ++i)
+            for (int i = 0; i < particleList.Count; ++i)
             {
                 particleList[i].updateParticles();
             }
