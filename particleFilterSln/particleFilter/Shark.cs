@@ -22,7 +22,7 @@ namespace particleFilter
 
         void create_shark()
         {
-            // create sharks
+            // creates sharks
         }
         void update_shark()
         {

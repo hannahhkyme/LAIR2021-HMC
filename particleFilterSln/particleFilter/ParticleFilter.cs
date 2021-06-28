@@ -43,6 +43,18 @@ namespace particleFilter
                 return velocity_wrap(vel);
             }
         }
+        double calc_range_error()
+        {
+            // calculates the average particles position to the true sharks' position
+            double auvRange = Math.Sqrt(Math.Pow((r1.Y - s1.Y), 2) + Math.Pow((r1.X - s1.X), 2));
+            return auvRange;
+        }
+        double calc_alpha_error()
+        {
+            // calculates the average particles position to the true sharks' position
+            double auvAlpha = angle_wrap(Math.Atan2((r1.Y - s1.Y), (r1.X - s1.X))) - r1.THETA;
+            return auvAlpha;
+        }
 
         void create()
         {
@@ -113,22 +125,19 @@ namespace particleFilter
 
             }
         }
-        double calc_range_error()
+        
+        public void Main(string[] args)
         {
-            // calculates the average particles position to the true sharks' position
-            double auvRange = Math.Sqrt(Math.Pow((r1.Y - s1.Y), 2) + Math.Pow((r1.X - s1.X), 2));
-            return auvRange;
-        }
-        double calc_alpha_error()
-        {
-            // calculates the average particles position to the true sharks' position
-            double auvAlpha = angle_wrap(Math.Atan2((r1.Y - s1.Y), (r1.X - s1.X))) - r1.THETA;
-            return auvAlpha;
-        }
+            ParticleFilter p1 = new ParticleFilter();
+            p1.create();
+            while (true)
+            {
+                p1.update();
+                p1.update_weights();
+                p1.correct();
+            }
 
-        static void Main(string[] args)
-        {
-
+            
         }
     }
 }
