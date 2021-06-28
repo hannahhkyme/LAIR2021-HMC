@@ -12,8 +12,8 @@ namespace particleFilter
         public double V;
         public Robot()
         {
-            X = 1.0;
-            Y = 2.0;
+            X = 0;
+            Y = 0;
             Z = 3.0;
             THETA = Math.PI;
             V = 3.0;

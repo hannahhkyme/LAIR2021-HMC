@@ -12,8 +12,8 @@ namespace particleFilter
         public double V;
         public Shark()
         {
-            X = 1.0;
-            Y = 2.0;
+            X = 30;
+            Y = 60;
             Z = 3.0;
             THETA  = Math.PI/2;
             V = 3.0;

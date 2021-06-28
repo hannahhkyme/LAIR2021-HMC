@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj",
+      "projectUniqueName": "/Users/hannahkyme/Desktop/lair2021/LAIR2021-HMC2/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj",
       "projectName": "particleFilter",
-      "projectPath": "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj",
+      "projectPath": "/Users/hannahkyme/Desktop/lair2021/LAIR2021-HMC2/LAIR2021-HMC/particleFilterSln/particleFilter/particleFilter.csproj",
       "packagesPath": "/Users/hannahkyme/.nuget/packages/",
-      "outputPath": "/Users/hannahkyme/Projects/LAIR2021-HMC/particleFilterSln/particleFilter/obj/",
+      "outputPath": "/Users/hannahkyme/Desktop/lair2021/LAIR2021-HMC2/LAIR2021-HMC/particleFilterSln/particleFilter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hannahkyme/.config/NuGet/NuGet.Config"
