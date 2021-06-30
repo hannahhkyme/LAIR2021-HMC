@@ -33,9 +33,14 @@ namespace TestRealTimeCharts
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cpuChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.cpuChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // cpuChart
@@ -50,7 +55,7 @@ namespace TestRealTimeCharts
             this.cpuChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.cpuChart.Legends.Add(legend1);
-            this.cpuChart.Location = new System.Drawing.Point(95, 3);
+            this.cpuChart.Location = new System.Drawing.Point(33, 26);
             this.cpuChart.Name = "cpuChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -70,7 +75,7 @@ namespace TestRealTimeCharts
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1061, 635);
+            this.button1.Location = new System.Drawing.Point(997, 672);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 52);
             this.button1.TabIndex = 1;
@@ -78,17 +83,37 @@ namespace TestRealTimeCharts
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(1180, 26);
+            this.chart1.Name = "chart1";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(893, 730);
+            this.chart1.TabIndex = 2;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1610, 745);
+            this.ClientSize = new System.Drawing.Size(2234, 798);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cpuChart);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cpuChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -97,6 +122,7 @@ namespace TestRealTimeCharts
 
         private System.Windows.Forms.DataVisualization.Charting.Chart cpuChart;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

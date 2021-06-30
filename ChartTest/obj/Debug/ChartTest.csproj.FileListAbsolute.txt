@@ -8,3 +8,13 @@ C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.csproj.Gener
 C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.csproj.CoreCompileInputs.cache
 C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.exe
 C:\Users\11thr\source\repos\ChartTest\ChartTest\obj\Debug\ChartTest.pdb
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\bin\Debug\ChartTest.exe.config
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\bin\Debug\ChartTest.exe
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\bin\Debug\ChartTest.pdb
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\ChartTest.csproj.AssemblyReference.cache
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\TestRealTimeCharts.Form1.resources
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\ChartTest.Properties.Resources.resources
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\ChartTest.csproj.GenerateResource.cache
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\ChartTest.csproj.CoreCompileInputs.cache
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\ChartTest.exe
+C:\Users\11thr\Desktop\LAIR\LAIR2021-HMC\ChartTest\obj\Debug\ChartTest.pdb

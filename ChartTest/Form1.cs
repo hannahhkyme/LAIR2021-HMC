@@ -52,6 +52,15 @@ namespace TestRealTimeCharts
                     //......
                 }
 
+                if (chart1.IsHandleCreated)
+                {
+                    this.Invoke((MethodInvoker)delegate { UpdateChart1(); });
+                }
+                else
+                {
+                    //......
+                }
+
                 Thread.Sleep(100);
             }
         }
@@ -63,8 +72,19 @@ namespace TestRealTimeCharts
             for (int i = 0; i < w1xArray.Length - 1; ++i)
             {
                 cpuChart.Series["Series1"].Points.AddXY(w1xArray[i], w1yArray[i]);
+                cpuChart.Series["Series2"].Points.AddXY(w2xArray[i], w2yArray[i]);
             }
             
+
+        }
+
+        private void UpdateChart1()
+        {
+            chart1.Series["Series1"].Points.Clear();
+            for (int i = 0; i < w1xArray.Length - 1; ++i)
+            {
+                chart1.Series["Series1"].Points.AddXY(w1xArray[i], w1yArray[i]);
+            }
 
         }
 
@@ -90,6 +110,11 @@ namespace TestRealTimeCharts
             cpuThread = new Thread(new ThreadStart(this.getParticleCoordinates));
             cpuThread.IsBackground = true;
             cpuThread.Start();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

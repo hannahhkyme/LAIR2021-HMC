@@ -125,16 +125,53 @@ namespace particleFilter
 
             }
         }
-        
+
+        List weight_list_x(int weight_number)
+        {
+            List<double> weight_list_x = new List<double>;
+            for (int i = 0; i < particleList.Count; ++i)
+            {
+                if (particleList[i].W <= weight_number)
+                {
+                    weight_list_x.Add(particleList[i].X);
+                }
+
+            }
+        }
+        List weight_list_y(int weight_number)
+        {
+            List<double> weight_list_y = new List<double>;
+            for (int i = 0; i < particleList.Count; ++i)
+            {
+                if (particleList[i].W <= weight_number)
+                {
+                    weight_list_y.Add(particleList[i].Y);
+                }
+
+            }
+        }
+
         public void Main(string[] args)
         {
             ParticleFilter p1 = new ParticleFilter();
+            Form1 f1 = new Form1():
             p1.create();
             while (true)
             {
                 p1.update();
                 p1.update_weights();
                 p1.correct();
+                // make coordinate list
+                double w1 = 0.333;
+                w1_list_x = p1.weight_list_x(w1);
+                w1_list_y = p1.weight_list_y(w1);
+
+                /*
+                f1.getCoordinates(w1_weight)
+                f1.getCoordinates(w1_weight)
+                f1.plotcoordinates
+                */
+                
             }
 
             
