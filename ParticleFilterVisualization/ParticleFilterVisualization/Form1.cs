@@ -15,12 +15,13 @@ namespace ParticleFilterVisualization
     public partial class Form1 : Form
     {
         private Thread cpuThread;
-        private double[] w1xArray = new double[5];
-        private double[] w1yArray = new double[5];
-        private double[] w2xArray = new double[60];
-        private double[] w2yArray = new double[60];
-        private double[] w3xArray = new double[60];
-        private double[] w3yArray = new double[60];
+        List<double>  w1xList = new List<double> ();
+        List<double> w1yList = new List<double>();
+        List<double> w2xList = new List<double>();
+        List<double> w2yList = new List<double>();
+        List<double> w3xList = new List<double>();
+        List<double> w3yList = new List<double>();
+        ParticleFilter p1 = new ParticleFilter();
 
         public Form1()
         {
@@ -31,31 +32,30 @@ namespace ParticleFilterVisualization
         private void getParticleCoordinates()
         {
             Random random_num = new Random();
-
+            p1.create();
             while (true)
             {
-                for (int i = 0; i < w1xArray.Length - 1; ++i)
+                p1.update();
+                p1.update_weights();
+                p1.correct();
+                // make coordinate list 
+                double w1 = 0.333;
+                w1xList = p1.weight_list_x(w1);
+                w1yList = p1.weight_list_x(w1);
+                double w2 = 0.666;
+                w1xList = p1.weight_list_x(w2);
+                w1yList = p1.weight_list_x(w2);
+
+                if (map.IsHandleCreated)
                 {
-                    w1xArray[i] = random_num.Next(-150, 150);
-                    w1yArray[i] = random_num.Next(-150, 150);
-
-
-                    w2xArray[i] = random_num.Next(-150, 150);
-                    w2yArray[i] = random_num.Next(-150, 150);
-                }
-
-                Array.Copy(w1yArray, 0, w1yArray, 0, w1yArray.Length - 1);
-                Array.Copy(w1xArray, 0, w1xArray, 0, w1xArray.Length - 1);
-                if (cpuChart.IsHandleCreated)
-                {
-                    this.Invoke((MethodInvoker)delegate { UpdateCpuChart(); });
+                    this.Invoke((MethodInvoker)delegate { UpdateMap(); });
                 }
                 else
                 {
                     //......
                 }
 
-                if (chart1.IsHandleCreated)
+                if (errorMap.IsHandleCreated)
                 {
                     this.Invoke((MethodInvoker)delegate { UpdateChart1(); });
                 }
@@ -68,23 +68,23 @@ namespace ParticleFilterVisualization
             }
         }
 
-        private void UpdateCpuChart()
+        private void UpdateMap()
         {
-            cpuChart.Series["Series1"].Points.Clear();
-            cpuChart.Series["Series2"].Points.Clear();
-            for (int i = 0; i < w1xArray.Length - 1; ++i)
+            map.Series["Series1"].Points.Clear();
+            map.Series["Series2"].Points.Clear();
+            for (int i = 0; i < w1xList.Count; ++i)
             {
-                cpuChart.Series["Series1"].Points.AddXY(w1xArray[i], w1yArray[i]);
-                cpuChart.Series["Series2"].Points.AddXY(w2xArray[i], w2yArray[i]);
+                map.Series["Series1"].Points.AddXY(w1xList[i], w1yList[i]);
+                map.Series["Series2"].Points.AddXY(w2xList[i], w2yList[i]);
             }
         }
 
         private void UpdateChart1()
         {
-            chart1.Series["Series1"].Points.Clear();
-            for (int i = 0; i < w1xArray.Length - 1; ++i)
+            errorMap.Series["Series1"].Points.Clear();
+            for (int i = 0; i < w1xList.Count; ++i)
             {
-                chart1.Series["Series1"].Points.AddXY(w1xArray[i], w1yArray[i]);
+                errorMap.Series["Series1"].Points.AddXY(w1xList[i], w1yList[i]);
             }
 
         }
@@ -96,6 +96,22 @@ namespace ParticleFilterVisualization
 
         private void chart1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void map_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ParticleFilter p1 = new ParticleFilter();
+            p1.create();
+            System.WriteLine(p1.particleList[0].X);
+            //cpuThread = new Thread(new ThreadStart(this.getParticleCoordinates));
+            //cpuThread.IsBackground = true;
+            //cpuThread.Start();
 
         }
     }

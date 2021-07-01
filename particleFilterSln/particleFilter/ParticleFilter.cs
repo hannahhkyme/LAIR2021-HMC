@@ -61,8 +61,7 @@ namespace particleFilter
             for (int i = 0; i < NUMBER_OF_PARTICLES; ++i)
             {
                 Particle particlei = new Particle();
-                particleList[i] = particlei;
-
+                particleList.Add(particlei);
             }
         }
         void update()
@@ -126,7 +125,7 @@ namespace particleFilter
             }
         }
 
-        List weight_list_x(int weight_number)
+        List<double> weight_list_x(double weight_number)
         {
             List<double> weight_list_x = new List<double>;
             for (int i = 0; i < particleList.Count; ++i)
@@ -138,7 +137,7 @@ namespace particleFilter
 
             }
         }
-        List weight_list_y(int weight_number)
+        List<double> weight_list_y(double weight_number)
         {
             List<double> weight_list_y = new List<double>;
             for (int i = 0; i < particleList.Count; ++i)
@@ -154,8 +153,8 @@ namespace particleFilter
         public void Main(string[] args)
         {
             ParticleFilter p1 = new ParticleFilter();
-            Form1 f1 = new Form1():
             p1.create();
+            /*
             while (true)
             {
                 p1.update();
@@ -166,7 +165,7 @@ namespace particleFilter
                 w1_list_x = p1.weight_list_x(w1);
                 w1_list_y = p1.weight_list_y(w1);
 
-                /*
+               
                 f1.getCoordinates(w1_weight)
                 f1.getCoordinates(w1_weight)
                 f1.plotcoordinates

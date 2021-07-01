@@ -29,70 +29,86 @@ namespace ParticleFilterVisualization
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.error = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.errorMap = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.map = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.map)).BeginInit();
             this.SuspendLayout();
             // 
-            // error
+            // errorMap
             // 
-            chartArea1.Name = "ChartArea1";
-            this.error.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.error.Legends.Add(legend1);
-            this.error.Location = new System.Drawing.Point(986, 0);
-            this.error.Name = "error";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.error.Series.Add(series1);
-            this.error.Size = new System.Drawing.Size(954, 763);
-            this.error.TabIndex = 0;
-            this.error.Text = "chart1";
-            this.error.Click += new System.EventHandler(this.chart1_Click);
+            chartArea5.Name = "ChartArea1";
+            this.errorMap.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.errorMap.Legends.Add(legend5);
+            this.errorMap.Location = new System.Drawing.Point(370, 0);
+            this.errorMap.Margin = new System.Windows.Forms.Padding(2);
+            this.errorMap.Name = "errorMap";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.errorMap.Series.Add(series7);
+            this.errorMap.Size = new System.Drawing.Size(378, 357);
+            this.errorMap.TabIndex = 0;
+            this.errorMap.Text = "errorMap";
+            this.errorMap.Click += new System.EventHandler(this.chart1_Click);
             // 
             // map
             // 
-            chartArea2.Name = "ChartArea1";
-            this.map.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.map.Legends.Add(legend2);
-            this.map.Location = new System.Drawing.Point(3, 0);
+            chartArea6.Name = "ChartArea1";
+            this.map.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.map.Legends.Add(legend6);
+            this.map.Location = new System.Drawing.Point(1, 0);
+            this.map.Margin = new System.Windows.Forms.Padding(2);
             this.map.Name = "map";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series3.Legend = "Legend1";
-            series3.Name = "Series2";
-            this.map.Series.Add(series2);
-            this.map.Series.Add(series3);
-            this.map.Size = new System.Drawing.Size(977, 763);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series9.Legend = "Legend1";
+            series9.Name = "Series2";
+            this.map.Series.Add(series8);
+            this.map.Series.Add(series9);
+            this.map.Size = new System.Drawing.Size(365, 332);
             this.map.TabIndex = 1;
-            this.map.Text = "chart2";
+            this.map.Text = "map";
+            this.map.Click += new System.EventHandler(this.map_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(290, 296);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1952, 763);
+            this.ClientSize = new System.Drawing.Size(811, 463);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.map);
-            this.Controls.Add(this.error);
+            this.Controls.Add(this.errorMap);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.map)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,8 +116,9 @@ namespace ParticleFilterVisualization
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart error;
+        private System.Windows.Forms.DataVisualization.Charting.Chart errorMap;
         private System.Windows.Forms.DataVisualization.Charting.Chart map;
+        private System.Windows.Forms.Button button1;
     }
 }
 

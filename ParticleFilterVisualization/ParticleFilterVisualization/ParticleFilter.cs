@@ -21,7 +21,6 @@ namespace ParticleFilterVisualization
         public ParticleFilter()
 
         {
-
             Current_Time = 0;
             NUMBER_OF_PARTICLES = 15;
             Shark s1 = new Shark();
@@ -65,16 +64,16 @@ namespace ParticleFilterVisualization
             return auvAlpha;
         }
 
-        void create()
+        public void create()
         {
             for (int i = 0; i < NUMBER_OF_PARTICLES; ++i)
             {
                 Particle particlei = new Particle();
-                particleList[i] = particlei;
+                particleList.Add(particlei);
 
             }
         }
-        void update()
+        public void update()
         {
             // updates particles while simulated
             // returns new list of updated particles
@@ -85,7 +84,7 @@ namespace ParticleFilterVisualization
             }
 
         }
-        void update_weights()
+        public void update_weights()
         {
             // normalize new weights for each new shark measurement
             double auv_range = this.calc_range_error();
@@ -100,7 +99,7 @@ namespace ParticleFilterVisualization
 
 
         }
-        void correct()
+        public void correct()
         {
             //corrects the particles, adding more copies of particles based on how high the weight is
             for (int i = 0; i < particleList.Count; ++i)
@@ -135,7 +134,7 @@ namespace ParticleFilterVisualization
             }
         }
 
-        List<double> weight_list_x(double weight_number)
+        public List<double> weight_list_x(double weight_number)
         {
             List<double> weight_list_x = new List<double>();
             for (int i = 0; i < particleList.Count; ++i)
@@ -148,7 +147,7 @@ namespace ParticleFilterVisualization
             }
             return weight_list_x;
         }
-        List<double> weight_list_y(double weight_number)
+        public List<double> weight_list_y(double weight_number)
         {
             List<double> weight_list_y = new List<double>();
             for (int i = 0; i < particleList.Count; ++i)
@@ -165,25 +164,9 @@ namespace ParticleFilterVisualization
         public void Main(string[] args)
         {
             ParticleFilter p1 = new ParticleFilter();
-            Form1 f1 = new Form1();
             p1.create();
-            while (true)
-            {
-                p1.update();
-                p1.update_weights();
-                p1.correct();
-                // make coordinate list
-                double w1 = 0.333;
-                w1_list_x = p1.weight_list_x(w1);
-                w1_list_y = p1.weight_list_y(w1);
+            Console.WriteLine(p1.particleList[0].X);
 
-                /*
-                f1.getCoordinates(w1_weight)
-                f1.getCoordinates(w1_weight)
-                f1.plotcoordinates
-                */
-                
-            }
 
             
         }
